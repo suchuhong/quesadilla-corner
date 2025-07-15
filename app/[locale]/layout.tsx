@@ -1,35 +1,30 @@
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
-export default async function LocaleLayout({
+export const metadata: Metadata = {
+  title: {
+    default: 'Easy Quesadilla Recipes - Quesadilla Corner',
+    template: '%s | Quesadilla Corner',
+  },
+  description: 'Find easy, delicious quesadilla recipes for any occasion. From classic chicken to vegetarian options, start cooking with us!',
+};
+
+export default function RootLayout({
   children,
-  params,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  // Ensure that the incoming `locale` is valid
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
+}>) {
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="canonical" href="https://financetools.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="google-adsense-account" content="ca-pub-5797254464105941" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5797254464105941" crossOrigin="anonymous"></script>
-      </head>
-      <body className={inter.className}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+    <html lang="en">
+      <body className={`${inter.variable} min-h-screen flex flex-col font-sans antialiased`}>
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
