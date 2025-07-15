@@ -1,10 +1,16 @@
+// 1. 从 'next/image' 导入 StaticImageData 类型
+import type { StaticImageData } from 'next/image';
+import classicChickenQuesadillaImg from '../public/images/classic-chicken-quesadilla.png';
+import cheeseQuesadillas from '../public/images/cheese-quesadillas.png';
+import QuesadillaSauce from '../public/images/Quesadilla-Sauce.png';
 // 定义食谱的数据结构类型
 export type Recipe = {
   id: number;
   slug: string;
   title: string;
   description: string;
-  imageUrl: string;
+  // imageUrl: string;
+  imageUrl: StaticImageData; // <--- 修改这里
   prepTime: number;
   cookTime: number;
   servings: number;
@@ -20,7 +26,7 @@ export const recipesData: Recipe[] = [
     slug: 'classic-chicken-quesadilla',
     title: 'Classic Chicken Quesadilla Recipe',
     description: 'A quick and easy chicken quesadilla recipe, perfect for a weeknight dinner or a satisfying lunch. Packed with cheese and tender chicken.',
-    imageUrl: 'https://placehold.co/600x400/f59e0b/ffffff?text=Chicken+Quesadilla',
+    imageUrl: classicChickenQuesadillaImg,
     prepTime: 10,
     cookTime: 15,
     servings: 2,
@@ -47,7 +53,7 @@ export const recipesData: Recipe[] = [
     slug: 'how-to-make-cheese-quesadillas',
     title: 'How to Make Perfect Cheese Quesadillas',
     description: 'Learn how to make the ultimate cheese quesadillas with perfectly melted cheese and a crispy golden tortilla. The simplest and most satisfying snack!',
-    imageUrl: 'https://placehold.co/600x400/facc15/ffffff?text=Cheese+Quesadilla',
+    imageUrl: cheeseQuesadillas,
     prepTime: 2,
     cookTime: 8,
     servings: 1,
@@ -74,7 +80,7 @@ export const recipesData: Recipe[] = [
     slug: 'how-to-make-taco-bell-quesadilla-sauce',
     title: 'How to Make Taco Bell Quesadilla Sauce (Copycat)',
     description: 'Craving that creamy, spicy sauce from Taco Bell? Learn how to make the famous quesadilla sauce at home with this simple copycat recipe.',
-    imageUrl: 'https://placehold.co/600x400/ef4444/ffffff?text=Taco+Bell+Sauce',
+    imageUrl: QuesadillaSauce,
     prepTime: 5,
     cookTime: 0,
     servings: 8, // Makes about 1 cup
@@ -103,7 +109,7 @@ export const recipesData: Recipe[] = [
     slug: 'ultimate-breakfast-quesadilla',
     title: 'The Ultimate Breakfast Quesadilla',
     description: 'Start your day right with a hearty and delicious breakfast quesadilla, filled with fluffy scrambled eggs, savory sausage, and melted cheese.',
-    imageUrl: 'https://placehold.co/600x400/a3e635/ffffff?text=Breakfast+Quesadilla',
+    imageUrl: classicChickenQuesadillaImg,
     prepTime: 10,
     cookTime: 10,
     servings: 2,
@@ -133,7 +139,7 @@ export const recipesData: Recipe[] = [
     slug: 'vegetarian-bean-and-cheese-quesadilla',
     title: 'Hearty Vegetarian Bean & Cheese Quesadilla',
     description: 'A delicious and filling vegetarian option packed with black beans, corn, and spices. A perfect meat-free meal that is ready in minutes.',
-    imageUrl: 'https://placehold.co/600x400/84cc16/ffffff?text=Veggie+Quesadilla',
+    imageUrl: cheeseQuesadillas,
     prepTime: 5,
     cookTime: 10,
     servings: 2,
@@ -162,7 +168,7 @@ export const recipesData: Recipe[] = [
     slug: 'spicy-shrimp-quesadilla-recipe',
     title: 'Spicy Shrimp and Avocado Quesadilla Recipe',
     description: 'A gourmet quesadilla recipe featuring spicy shrimp, creamy avocado, and melted cheese. A fantastic choice for a special lunch or light dinner.',
-    imageUrl: 'https://placehold.co/600x400/3b82f6/ffffff?text=Shrimp+Quesadilla',
+    imageUrl: QuesadillaSauce,
     prepTime: 15,
     cookTime: 10,
     servings: 2,

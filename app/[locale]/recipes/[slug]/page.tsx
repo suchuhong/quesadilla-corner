@@ -5,13 +5,20 @@ import { recipesData } from '@/lib/data';
 import { Badge } from '@/components/common/Badge';
 import { Card, CardContent } from '@/components/common/Card';
 import { RecipeSchema } from '@/components/RecipeSchema';
+import { routing } from '@/i18n/routing';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ 
+    slug: string; 
+    locale: string;
+  }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const recipe = recipesData.find(r => r.slug === params.slug);
+
+  const  { slug, locale } = await params;
+  console.log('Generating metadata for:', slug, 'in locale:', locale);
+  const recipe = recipesData.find(r => r.slug === slug);
   if (!recipe) {
     return { title: 'Recipe Not Found' };
   }
@@ -22,13 +29,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return recipesData.map((recipe) => ({
-    slug: recipe.slug,
-  }));
+  const locales = routing.locales; // <-- 假设您支持这两种语言
+
+  const params = recipesData.flatMap((recipe) =>
+    locales.map((locale) => ({
+      locale: locale,
+      slug: recipe.slug,
+    }))
+  );
+
+  return params;
 }
 
-export default function RecipePage({ params }: Props) {
-  const recipe = recipesData.find(r => r.slug === params.slug);
+export default async function RecipePage({ params }: Props) {
+
+  const  { slug, locale } = await params;
+  console.log('RecipePage for:', slug, 'in locale:', locale);
+  const recipe = recipesData.find(r => r.slug === slug);
 
   if (!recipe) {
     notFound();

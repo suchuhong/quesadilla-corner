@@ -11,12 +11,12 @@ export default function GuidePage() {
       <article className="container mx-auto px-4 max-w-3xl prose lg:prose-xl prose-headings:text-gray-800 prose-a:text-amber-600 hover:prose-a:text-amber-700">
         <h1>The Ultimate Quesadilla Maker Tool Guide for 2025</h1>
         <p className="lead">
-          While a simple pan works wonders, a dedicated <strong>quesadilla maker tool</strong> can take your game to the next level. We'll break down why you might want one and review the top models on the market.
+          While a simple pan works wonders, a dedicated <strong>quesadilla maker tool</strong> can take your game to the next level. We&apos;ll break down why you might want one and review the top models on the market.
         </p>
         
         <h2>Why Use a Quesadilla Maker?</h2>
         <p>
-          A good quesadilla maker isn't just a gadget; it's a specialized tool designed for one purpose: perfection. Key advantages include:
+          A good quesadilla maker isn&apos;t just a gadget; it&apos;s a specialized tool designed for one purpose: perfection. Key advantages include:
         </p>
         <ul>
           <li><strong>Sealed Edges:</strong> Most makers press and seal the edges, keeping all that cheesy goodness from spilling out.</li>
@@ -34,7 +34,7 @@ export default function GuidePage() {
         
         <h3>2. Hamilton Beach Quesadilla Press (Best Budget Option)</h3>
         <p>
-          For those who want a reliable tool without breaking the bank, the Hamilton Beach model is a fantastic choice. It's compact, easy to store, and delivers consistently great results for standard 8-inch tortillas.
+          For those who want a reliable tool without breaking the bank, the Hamilton Beach model is a fantastic choice. It&apos;s compact, easy to store, and delivers consistently great results for standard 8-inch tortillas.
         </p>
 
         <h2>Quesadilla Maker vs. Pan: The Final Verdict</h2>

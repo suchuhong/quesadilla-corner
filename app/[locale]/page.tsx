@@ -49,7 +49,7 @@ export default function HomePage() {
         <section className="py-16">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/2">
-               <Image src="https://placehold.co/600x450/e2e8f0/334155?text=What+is+Quesadilla+Corner%3F" alt="About Quesadilla Corner" className="rounded-lg shadow-lg w-full" width={600} height={450} />
+               <Image src="/images/what-is-quesadilla-corner.png" alt="About Quesadilla Corner" className="rounded-lg shadow-lg w-full" width={600} height={450} />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">What is Quesadilla Corner?</h2>
@@ -67,7 +67,7 @@ export default function HomePage() {
         <section className="py-16">
           <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
             <div className="md:w-1/2">
-              <Image src="https://placehold.co/600x450/e2e8f0/334155?text=Why+Choose+Our+Recipes%3F" alt="Why Choose Our Recipes" className="rounded-lg shadow-lg w-full" width={600} height={450}/>
+              <Image src="/images/why-choose-our-recipes.png" alt="Why Choose Our Recipes" className="rounded-lg shadow-lg w-full" width={600} height={450}/>
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose Us?</h2>
@@ -75,7 +75,7 @@ export default function HomePage() {
               <ul className="space-y-4">
                 <FeatureListItem><strong>Tested Recipes:</strong> Every recipe is tested and perfected by our team to ensure delicious results every time.</FeatureListItem>
                 <FeatureListItem><strong>Honest Reviews:</strong> Our tool reviews are unbiased and based on real-world testing to help you make the best choice.</FeatureListItem>
-                <FeatureListItem><strong>For All Skill Levels:</strong> Whether you're a beginner or a seasoned cook, you'll find recipes and tips that suit your skills.</FeatureListItem>
+                <FeatureListItem><strong>For All Skill Levels:</strong> Whether you&apos;re a beginner or a seasoned cook, you&apos;ll find recipes and tips that suit your skills.</FeatureListItem>
               </ul>
             </div>
           </div>
@@ -85,11 +85,11 @@ export default function HomePage() {
         <section className="py-16">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/2">
-              <Image src="https://placehold.co/600x450/e2e8f0/334155?text=How+to+Make+a+Quesadilla" alt="How to Make a Quesadilla" className="rounded-lg shadow-lg w-full" width={600} height={450}/>
+              <Image src="/images/how-to-make-a-quesadilla.png" alt="How to Make a Quesadilla" className="rounded-lg shadow-lg w-full" width={600} height={450}/>
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">How to Make a Quesadilla</h2>
-              <p className="text-gray-600 mb-6">Learning how to make a quesadilla is easy and rewarding. Follow these basic steps for a perfect result every time, whether you're using a pan or a quesadilla maker.</p>
+              <p className="text-gray-600 mb-6">Learning how to make a quesadilla is easy and rewarding. Follow these basic steps for a perfect result every time, whether you&apos;re using a pan or a quesadilla maker.</p>
               <ul className="space-y-4">
                 <FeatureListItem><strong>1. Prepare Your Fillings:</strong> Choose your cheese (like in our cheese quesadillas), cooked meats, and veggies. Having everything ready makes assembly quick.</FeatureListItem>
                 <FeatureListItem><strong>2. Heat Your Surface:</strong> Lightly butter or oil a skillet or preheat your quesadilla maker over medium heat.</FeatureListItem>
