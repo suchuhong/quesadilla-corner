@@ -21,6 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="canonical" href="https://quesadillacorner.site" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-adsense-account" content="ca-pub-5797254464105941" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5797254464105941" crossOrigin="anonymous"></script>  
+      </head>
       <body className={`${inter.variable} min-h-screen flex flex-col font-sans antialiased`}>
         <Header />
         <main className="flex-grow">{children}</main>
